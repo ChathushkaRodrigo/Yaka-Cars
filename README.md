@@ -1,7 +1,6 @@
 
 
 
-/Users/ChathushkaRodrigo/Desktop/Goliath/React/yaka-cars/public/images/model-x.jpg
 
 
 # Getting Started with Create React App
