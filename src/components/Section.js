@@ -44,6 +44,7 @@ display:flex;
 flex-direction:column;
 justify-content:space-between;
 align-items:center;
+z-index:10;
 background-image:${props=> `url("/images/${props.bgImage}")`}
 
 
@@ -52,6 +53,7 @@ background-image:${props=> `url("/images/${props.bgImage}")`}
 const ItemText =styled.div`
 padding-top:15vh;
 text-align:center;
+z-index:-1;
 `
 const ButtonGroup =styled.div`
 display:flex;
