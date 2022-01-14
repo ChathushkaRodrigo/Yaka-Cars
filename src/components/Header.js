@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React ,{useState} from 'react'
 
 import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+import { Transform } from '@material-ui/icons';
 
 // import MenuIcon from '@mui/icons-material/Menu';
 function Header() {
@@ -22,11 +24,11 @@ function Header() {
         <RightMenu>
         <a href="#">Shop</a> 
         <a href="#">Tesla Account</a> 
-        <CustomMenu/>
+        <CustomMenu onClick ={()=>setBurgerStatus(true)} />
         </RightMenu>
         <BurgerNav show={burgerStatus}>
             <CloseWrapper>
-            <CustomClose/>
+            <CustomClose  onClick={()=>setBurgerStatus(false)}/>
             </CloseWrapper>
             
             <li><a href="#">Existing Inventory</a></li>
@@ -96,7 +98,8 @@ padding:20px;
 display:flex;
 flex-direction:column;
 text-align:start;
-// transform:${props=>props.show ? 'translateX(0)':'translateX(100)'}
+transform:${props=> props.show ? 'translateX(0)' : 'translateX(100%)'};
+transition: transform 0.3s ;
 li{
     padding:15px 0;
     border-bottom: 1px solid rgba(0,0,0,.2);
